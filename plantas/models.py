@@ -1,6 +1,6 @@
 from django.db import models
 
-class Planta(models.model):
+class Planta(models.Model):
 
     Tipos_de_reino = (
       (1, 'briófitas'),
@@ -8,9 +8,9 @@ class Planta(models.model):
       (3, 'pteridófitas'),
       (4, 'gimnospermas'),
     )
-    
+
     nome = models.CharField(max_length=45)
-    nome_cientifico = models.models.CharField(max_length=50)
+    nome_cientifico = models.CharField(max_length=50)
     especie = models.CharField(max_length=45)
     reino = models.PositiveSmallIntegerField(choices=Tipos_de_reino)
     horas_de_luz = models.DurationField()

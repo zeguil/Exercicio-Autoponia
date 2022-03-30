@@ -1,14 +1,14 @@
-#django libs
+#django
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-#DRF libs
+#DRF
 from rest_framework.routers import DefaultRouter
 from rest_framework import permissions
 
-#yasg libs
+#yasg
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
@@ -16,12 +16,13 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 # viewSets
 from regadores.api.viewsets import RegadorViewSet
 from plantas.api.viewsets import PlantaViewSet
-
+from usuarios.api.viewsets import UsuarioViewSet
 router = DefaultRouter()
 
 # rotas de viewsets
 router.register('plantas', PlantaViewSet)
 router.register('regadores', RegadorViewSet)
+router.register('usuarios', UsuarioViewSet)
 
 # configurção do swagger
 schema_view = get_schema_view(

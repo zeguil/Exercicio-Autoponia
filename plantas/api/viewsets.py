@@ -1,6 +1,6 @@
 from plantas.models import Planta
 from .serializers import PlantaSerializer
-#DRF libs
+#DRF
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 

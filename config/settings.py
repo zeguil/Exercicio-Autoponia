@@ -27,7 +27,6 @@ INSTALLED_APPS = [
     
     #libs
     'rest_framework',
-    'djoser',
     'drf_yasg',
 
     #apps
@@ -136,3 +135,6 @@ SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
 }
+
+#Diz ao django qual será o modelo de usuário
+AUTH_USER_MODEL = "usuarios.Usuario"

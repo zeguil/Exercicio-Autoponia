@@ -1,6 +1,6 @@
 from regadores.models import Regador
 from .serializers import RegadorSerializer
-#DRF libs
+#DRF
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
