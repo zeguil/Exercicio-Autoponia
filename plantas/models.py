@@ -2,18 +2,18 @@ from django.db import models
 
 class Planta(models.Model):
 
-    Tipos_de_reino = (
-      (1, 'briófitas'),
-      (2, 'angiospermas'),
-      (3, 'pteridófitas'),
-      (4, 'gimnospermas'),
+    GRUPO_CHOICES = (
+      ('B', 'briófitas'),
+      ('A','angiospermas'),
+      ('P','pteridófitas'),
+      ('G','gimnospermas'),
     )
 
     nome = models.CharField(max_length=45)
     nome_cientifico = models.CharField(max_length=50)
     especie = models.CharField(max_length=45)
-    reino = models.PositiveSmallIntegerField(choices=Tipos_de_reino)
-    horas_de_luz = models.DurationField()
+    grupo = models.CharField(max_length=1, choices=GRUPO_CHOICES)
+    iluminacao = models.TextField()
     qtd_agua_dia = models.FloatField()
     foto = models.ImageField(upload_to='plantas', null=True, blank=True)
 

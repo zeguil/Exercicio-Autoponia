@@ -5,6 +5,6 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 class RegadorViewSet(ModelViewSet):
-    queyset = Regador.objects.all() 
+    queryset = Regador.objects.all() 
     serializer_class = RegadorSerializer
     permission_classes = (IsAuthenticatedOrReadOnly, )

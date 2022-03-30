@@ -19,19 +19,20 @@ class PlantaSerializer(ModelSerializer):
         help_text="Indica a espécie da planta"
     )
 
-    reino = serializers.IntegerField(
-        label="Reino",
-        help_text="Indica o reino da planta"
+    grupo = serializers.ChoiceField(
+        label="Grupo",
+        help_text="Indica o grupo da planta",
+        choices=Planta.GRUPO_CHOICES
     )
 
-    horas_de_luz = serializers.DurationField(
-        label="Horas na luz",
+    iluminacao = serializers.CharField(
+        label="Iluminação",
         help_text="Indica o tempo de luz que a planta deve receber"
     )
 
     qtd_agua_dia = serializers.FloatField(
         label="Quantidade de água",
-        help_text="Indica a quantidade de água que a planta deve receber"
+        help_text="Indica a quantidade de água que a planta deve receber em mililitros"
     )
 
     foto = serializers.ImageField(
@@ -41,4 +42,6 @@ class PlantaSerializer(ModelSerializer):
 
     class Meta:
         model = Planta
-        fields = ["nome", "nome_cientifico", "especie", "reino", "horas_de_luz", "qtd_agua_dia", "foto"]
+        fields = ["id","nome", "nome_cientifico", "especie", "grupo", "iluminacao", "qtd_agua_dia", "foto"]
+
+   

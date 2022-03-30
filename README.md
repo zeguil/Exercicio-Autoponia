@@ -35,6 +35,20 @@ $ python manage.py runserver
 ```
 <br>
 
+### 🙍‍♂️ Criando um usuário
+
+```sh
+acesse - <http://localhost:8000/api/v1/usuarios/>
+```
+
+```
+curl \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"username": "autoponia", "password": "hello123", "password_confirm": "hello123", "is_staff": true, "is_superuser": true}' 
+
+```
+
 ### 🔑 Autenticação
 * ####  Para receber o token de acesso:
 ```
@@ -78,3 +92,5 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Django Rest Framework](https://www.django-rest-framework.org/)
 
 <br>
+
+**By: José Guilherme Lins**

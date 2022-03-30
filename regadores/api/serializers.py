@@ -7,24 +7,24 @@ class RegadorSerializer(ModelSerializer):
 
     modelo = serializers.CharField(
         label="Modelo",
-        help_text="Indica o modelo do regador"
+        help_text="Indica o modelo do regador."
     )
 
-    capacidade = serializers.DurationField(
+    capacidade = serializers.IntegerField(
         label="Capacidade",
-        help_text="Indica a capacidade para armazenamento de água"
+        help_text="Indica a capacidade para armazenamento de água em mililitros."
     )
 
     ativo = serializers.BooleanField(
         label="Ativo",
-        help_text="Indica se o regador esta ativo"
+        help_text="Indica se o regador esta ativo."
     )
 
     foto = serializers.ImageField(
         label="Foto",
-        help_text="Uma foto do regador"
+        help_text="Uma foto do regador."
     )
 
     class Meta:
         model = Regador
-        fields = ["modelo", "capacidade", "ativo", "foto"]
+        fields = ["modelo", "capacidade", "ativo", "foto", "planta"]
