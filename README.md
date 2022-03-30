@@ -42,7 +42,7 @@ curl \
   -X POST \
   -H "Content-Type: application/json" \
   -d '{"username": "autoponia", "password": "hello123"}' \
-  http://localhost:8000/api/token/
+  http://localhost:8000/api/v1/token/
 
 ...
 {
@@ -55,7 +55,6 @@ curl \
 ```
 curl \
   -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiY29sZF9zdHVmZiI6IuKYgyIsImV4cCI6MTIzNDU2LCJqdGkiOiJmZDJmOWQ1ZTFhN2M0MmU4OTQ5MzVlMzYyYmNhOGJjYSJ9.NHlztMGER7UADHZJlxNG0WSi22a2KaYSfd1S-AuT7lU" \
-  http://localhost:8000/api/some-protected-view/
 ```
 
 * ####  Quando o token de acesso expirar, você deve realizar o refresh passando o antigo token no corpo da requisição para obter um novo token de acesso:
@@ -64,7 +63,7 @@ curl \
   -X POST \
   -H "Content-Type: application/json" \
   -d '{"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImNvbGRfc3R1ZmYiOiLimIMiLCJleHAiOjIzNDU2NywianRpIjoiZGUxMmY0ZTY3MDY4NDI3ODg5ZjE1YWMyNzcwZGEwNTEifQ.aEoAYkSJjoWH1boshQAaTkf8G3yn0kapko6HFRt7Rh4"}' \
-  http://localhost:8000/api/token/refresh/
+  http://localhost:8000/api/v1/token/refresh/
 
 ...
 {"access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiY29sZF9zdHVmZiI6IuKYgyIsImV4cCI6MTIzNTY3LCJqdGkiOiJjNzE4ZTVkNjgzZWQ0NTQyYTU0NWJkM2VmMGI0ZGQ0ZSJ9.ekxRxgb9OKmHkfy-zs1Ro_xs1eMLXiR17dIDBVxeT-w"}
