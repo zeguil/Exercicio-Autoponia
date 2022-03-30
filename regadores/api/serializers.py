@@ -1,9 +1,10 @@
 from regadores.models import Regador
-from rest_framework.serializers import ModelSerializer
+#DRF libs
 from rest_framework import serializers
+from rest_framework.serializers import ModelSerializer
 
 class RegadorSerializer(ModelSerializer):
-    
+
     modelo = serializers.CharField(
         label="Modelo",
         help_text="Indica o modelo do regador"

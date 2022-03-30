@@ -1,9 +1,10 @@
 from regadores.models import Planta
-from rest_framework.serializers import ModelSerializer
+#DRF libs
 from rest_framework import serializers
+from rest_framework.serializers import ModelSerializer
 
 class PlantaSerializer(ModelSerializer):
-    
+
     nome = serializers.CharField(
         label="Nome",
         help_text="Indica o nome da planta"
@@ -28,12 +29,12 @@ class PlantaSerializer(ModelSerializer):
         help_text="Indica o tempo de luz que a planta deve receber"
     )
 
-    especie = serializers.FloatField(
+    qtd_agua_dia = serializers.FloatField(
         label="Quantidade de água",
         help_text="Indica a quantidade de água que a planta deve receber"
     )
 
-    especie = serializers.ImageField(
+    foto = serializers.ImageField(
         label="Foto",
         help_text="Uma foto da planta"
     )
