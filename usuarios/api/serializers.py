@@ -28,12 +28,11 @@ class UsuarioSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Usuario
-        fields = ('username','email', 'password', 'password_confirm', 'is_staff', 'is_superuser')
+        fields = ('username', 'password', 'password_confirm', 'is_staff', 'is_superuser')
         extra_kwargs = {'password': {'write_only': True}}
 
     def save(self):
         conta = Usuario(
-            email=self.validated_data['email'], 
             username=self.validated_data['username'],
             is_staff=self.validated_data['is_staff'],
             is_superuser=self.validated_data['is_superuser']
