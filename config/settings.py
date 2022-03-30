@@ -5,9 +5,6 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-0*3tu7!(y^xndf0lc_%iop8en=xovt&dq5uu-8f47p3*x9vf*m'
 
@@ -124,3 +121,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'imagens')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORL = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.simplejwt.authentication.JWTAuthentication',
+    )
+}
