@@ -5,6 +5,7 @@ class Regador(models.Model):
     
     modelo = models.CharField(max_length=50)
     capacidade = models.IntegerField()
+    pressao_bar = models.FloatField()
     ativo = models.BooleanField(default=False)
     foto = models.ImageField(upload_to='regadores', null=True, blank=True)
     planta = models.ManyToManyField(Planta, blank=True)
@@ -15,3 +16,5 @@ class Regador(models.Model):
 
     def __str__(self):
         return self.modelo
+
+    

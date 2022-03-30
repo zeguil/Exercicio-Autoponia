@@ -25,6 +25,10 @@ class PlantaSerializer(ModelSerializer):
         choices=Planta.GRUPO_CHOICES
     )
 
+    local = serializers.CharField(
+        label="Cidade",
+        help_text="Indica a cidade onde a planta esta."
+    )
     iluminacao = serializers.CharField(
         label="Iluminação",
         help_text="Indica o tempo de luz que a planta deve receber"
@@ -42,6 +46,6 @@ class PlantaSerializer(ModelSerializer):
 
     class Meta:
         model = Planta
-        fields = ["id","nome", "nome_cientifico", "especie", "grupo", "iluminacao", "qtd_agua_dia", "foto"]
+        fields = ["id","nome", "nome_cientifico", "especie", "grupo", "local", "iluminacao", "qtd_agua_dia", "foto"]
 
    

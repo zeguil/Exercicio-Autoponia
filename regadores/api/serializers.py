@@ -14,7 +14,10 @@ class RegadorSerializer(ModelSerializer):
         label="Capacidade",
         help_text="Indica a capacidade para armazenamento de água em mililitros."
     )
-
+    pressao_bar = serializers.FloatField(
+        label="Pressão da água",
+        help_text="Indica a pressão da água"
+    )
     ativo = serializers.BooleanField(
         label="Ativo",
         help_text="Indica se o regador esta ativo."
@@ -27,4 +30,4 @@ class RegadorSerializer(ModelSerializer):
 
     class Meta:
         model = Regador
-        fields = ["modelo", "capacidade", "ativo", "foto", "planta"]
+        fields = ["modelo", "capacidade", "pressao_bar" "ativo", "foto", "planta"]
