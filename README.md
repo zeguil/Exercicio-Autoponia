@@ -83,11 +83,11 @@ curl \
 {"access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiY29sZF9zdHVmZiI6IuKYgyIsImV4cCI6MTIzNTY3LCJqdGkiOiJjNzE4ZTVkNjgzZWQ0NTQyYTU0NWJkM2VmMGI0ZGQ0ZSJ9.ekxRxgb9OKmHkfy-zs1Ro_xs1eMLXiR17dIDBVxeT-w"}
 ```  
 
-### ☀️ Informação sobre o clima
+### ☀️ Informações sobre o clima
 #### Você pode descobrir informações como temperatura e umidade de uma planta passando o id dela.
 ##### Exemplo:
 ```
-http://example.com/api/v1/plamtas/{id}/clima
+http://example.com/api/v1/plantas/{id}/clima
 ```  
 
 ### 🔎 Buscas
