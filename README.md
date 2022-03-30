@@ -32,9 +32,10 @@ $ python manage.py runserver
 # Para ver a documentação e todos os endpoints disponiveis - acesse <http://localhost:8000/api/v1/swagger/>
 
 ```
+
 ### 🔑 Autenticação
 ```
-# Para receber o token:
+# Para receber o token de acesso:
 curl \
   -X POST \
   -H "Content-Type: application/json" \
