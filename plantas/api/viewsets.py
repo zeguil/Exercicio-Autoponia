@@ -9,7 +9,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 class PlantaViewSet(ModelViewSet):
     queryset = Planta.objects.all()
     serializer_class = PlantaSerializer
-    # permission_classes = (IsAuthenticatedOrReadOnly, )
+    permission_classes = (IsAuthenticatedOrReadOnly, )
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['nome']
     
