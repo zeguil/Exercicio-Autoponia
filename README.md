@@ -1,8 +1,9 @@
 # Exercicio Autoponia 🌱
 
 Uma API REST para gerenciamento de plantas e regadores feita com django rest framework.
+
 A API possui endpoints para realizir um CRUD de plantas, regadores e usuários.
-Para autenticação foi utilizado o padrão JWT, o usuário deve 
+
 
 ### 🎲 Rodando a API
 
@@ -56,7 +57,7 @@ curl \
   http://localhost:8000/api/some-protected-view/
 ```
 
-* Quando o token de acesso expirar, você deve realizar o refresh passando o antigo token para obter um novo token de acesso:
+* Quando o token de acesso expirar, você deve realizar o refresh passando o antigo token no corpo da requisição para obter um novo token de acesso:
 ```
 curl \
   -X POST \
