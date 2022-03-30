@@ -85,7 +85,7 @@ curl \
 
 ### ☀️ Informação sobre o clima
 #### Você pode descobrir informações como temperatura e umidade de uma planta passando o id dela.
-####Exemplo:
+##### Exemplo:
 ```
 http://example.com/api/v1/plamtas/{id}/clima
 ```  
@@ -93,7 +93,7 @@ http://example.com/api/v1/plamtas/{id}/clima
 ### 🔎 Buscas
 
 #### Tambem é possivel fazer buscas através da url, digitando campo e valor:
-####Exemplo:
+##### Exemplo:
 ```
 http://example.com/api/v1/usuarios/?username=autoponia
 ```  
