@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +28,7 @@ INSTALLED_APPS = [
     #libs
     'rest_framework',
     'djoser',
-    'drf_yasg'
+    'drf_yasg',
 
     #apps
     'plantas',
@@ -122,8 +123,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'imagens')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-REST_FRAMEWORL = {
+# Configuração de autheticação
+REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.simplejwt.authentication.JWTAuthentication',
     )
+}
+
+# Configuração de prefixo e vida útil do token JWT
+SIMPLE_JWT = {
+    "AUTH_HEADER_TYPES": ("Bearer",),
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
 }

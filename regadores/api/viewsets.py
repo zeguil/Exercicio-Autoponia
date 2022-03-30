@@ -4,6 +4,7 @@ from regadores.models import Regador
 from .serializers import RegadorSerializer
 
 class RegadorViewSet(ModelViewSet):
+    
     queyset = Regador.objects.all()
     serializer_class = RegadorSerializer
     permission_classes = (IsAuthenticatedOrReadOnly, )

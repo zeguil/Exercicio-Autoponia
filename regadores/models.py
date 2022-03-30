@@ -1,9 +1,10 @@
 from django.db import models
 
 class Regador(models.model):
-    nome = models.CharField(max_length=45)
-    marca = models.CharField(max_length=45)
-    qtd_agua = models.FloatField()
+    
+    modelo = models.CharField(max_length=50)
+    capacidade = models.FloatField()
+    ativo = models.BooleanField(default=False)
     foto = models.models.ImageField(upload_to='regadores', null=True, blank=True)
 
     class Meta:
@@ -11,4 +12,4 @@ class Regador(models.model):
         verbose_name_plural = 'Regadores'
 
     def __str__(self):
-        return self.nome
+        return self.modelo
