@@ -7,7 +7,7 @@ class Regador(models.Model):
     capacidade = models.FloatField()
     ativo = models.BooleanField(default=False)
     foto = models.ImageField(upload_to='regadores', null=True, blank=True)
-    planta = models.ManyToManyField("Planta", blanck=True)
+    planta = models.ManyToManyField(Planta, blank=True)
 
     class Meta:
         verbose_name = 'Regador'

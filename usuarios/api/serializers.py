@@ -22,7 +22,7 @@ class UsuarioSerializer(serializers.ModelSerializer):
     )
 
     is_superuser = serializers.BooleanField(
-        label="SuperUsuário",
+        label="Super Usuário",
         help_text="Indica que este usuário tem todas as permissões sem atribuí-las explicitamente."
     )
 
