@@ -31,7 +31,8 @@ INSTALLED_APPS = [
 
     #apps
     'plantas',
-    'regadores'
+    'regadores',
+    'usuarios',
 
 ]
 
