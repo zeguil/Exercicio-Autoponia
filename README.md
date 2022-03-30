@@ -82,9 +82,18 @@ curl \
 ...
 {"access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiY29sZF9zdHVmZiI6IuKYgyIsImV4cCI6MTIzNTY3LCJqdGkiOiJjNzE4ZTVkNjgzZWQ0NTQyYTU0NWJkM2VmMGI0ZGQ0ZSJ9.ekxRxgb9OKmHkfy-zs1Ro_xs1eMLXiR17dIDBVxeT-w"}
 ```  
+
+### ☀️ Informação sobre o clima
+#### Você pode descobrir informações como temperatura e umidade de uma planta passando o id dela.
+####Exemplo:
+```
+http://example.com/api/v1/plamtas/{id}/clima
+```  
+
 ### 🔎 Buscas
 
 #### Tambem é possivel fazer buscas através da url, digitando campo e valor:
+####Exemplo:
 ```
 http://example.com/api/v1/usuarios/?username=autoponia
 ```  
@@ -97,6 +106,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Django](https://www.djangoproject.com/)
 - [Django Rest Framework](https://www.django-rest-framework.org/)
 - [Simple JWT](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/)
+- [OpenWeather](https://openweathermap.org/)
 
 
 <br>
