@@ -81,7 +81,13 @@ curl \
 
 ...
 {"access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiY29sZF9zdHVmZiI6IuKYgyIsImV4cCI6MTIzNTY3LCJqdGkiOiJjNzE4ZTVkNjgzZWQ0NTQyYTU0NWJkM2VmMGI0ZGQ0ZSJ9.ekxRxgb9OKmHkfy-zs1Ro_xs1eMLXiR17dIDBVxeT-w"}
+```  
+### Buscas
+
+# Tambem é possivel fazer buscas através da url, digitando campo e valor:
 ```
+http://example.com/api/v1/usuarios/?username=autoponia
+```  
 
 ### 🛠 Tecnologias
 
@@ -90,6 +96,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Python](https://www.python.org/)
 - [Django](https://www.djangoproject.com/)
 - [Django Rest Framework](https://www.django-rest-framework.org/)
+- [Simple JWT](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/)
+
 
 <br>
 
