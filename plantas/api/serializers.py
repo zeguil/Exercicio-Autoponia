@@ -1,4 +1,4 @@
-from regadores.models import Planta
+from plantas.models import Planta
 #DRF
 from rest_framework import serializers
 from rest_framework.serializers import ModelSerializer
@@ -19,7 +19,7 @@ class PlantaSerializer(ModelSerializer):
         help_text="Indica a espécie da planta"
     )
 
-    reino = serializers.PositiveSmallIntegerField(
+    reino = serializers.IntegerField(
         label="Reino",
         help_text="Indica o reino da planta"
     )

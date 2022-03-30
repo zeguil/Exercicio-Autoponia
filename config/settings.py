@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     #libs
     'rest_framework',
     'drf_yasg',
+    'rest_framework_simplejwt',
 
     #apps
     'plantas',
@@ -126,7 +127,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Configuração de autheticação
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.simplejwt.authentication.JWTAuthentication',
+        
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
 

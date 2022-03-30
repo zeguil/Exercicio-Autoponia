@@ -20,9 +20,9 @@ from usuarios.api.viewsets import UsuarioViewSet
 router = DefaultRouter()
 
 # rotas de viewsets
-router.register('plantas', PlantaViewSet)
-router.register('regadores', RegadorViewSet)
-router.register('usuarios', UsuarioViewSet)
+router.register('plantas', PlantaViewSet, basename='Plantas')
+router.register('regadores', RegadorViewSet, basename='Regadores')
+router.register('usuarios', UsuarioViewSet, basename='Usuários')
 
 # configurção do swagger
 schema_view = get_schema_view(
