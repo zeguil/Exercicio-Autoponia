@@ -2,7 +2,7 @@
 
 Uma API REST para gerenciamento de plantas e regadores feita com django rest framework.
 
-A API possui endpoints para realizir um CRUD de plantas, regadores e usuários.
+A API possui endpoints para realizar um CRUD de plantas, regadores e usuários.
 
 
 ### 🎲 Rodando a API
@@ -51,6 +51,7 @@ curl \
 }
 ```
 * Você deve usar o token de acesso retornado no Header da requisição para comprovar a autenticação:
+(caso o usuário não esteja autenticado, só podera usar o método GET)
 ```
 curl \
   -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiY29sZF9zdHVmZiI6IuKYgyIsImV4cCI6MTIzNDU2LCJqdGkiOiJmZDJmOWQ1ZTFhN2M0MmU4OTQ5MzVlMzYyYmNhOGJjYSJ9.NHlztMGER7UADHZJlxNG0WSi22a2KaYSfd1S-AuT7lU" \
