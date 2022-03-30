@@ -30,4 +30,4 @@ class RegadorSerializer(ModelSerializer):
 
     class Meta:
         model = Regador
-        fields = ["modelo", "capacidade", "pressao_bar" "ativo", "foto", "planta"]
+        fields = ["modelo", "capacidade", "pressao_bar", "ativo", "foto", "planta"]
