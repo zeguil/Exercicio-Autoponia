@@ -33,6 +33,7 @@ $ python manage.py runserver
 
 ```
 <br>
+
 ### 🔑 Autenticação
 ```
 # Para receber o token de acesso:
