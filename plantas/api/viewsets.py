@@ -1,4 +1,5 @@
 import requests
+from decouple import config
 from plantas.models import Planta
 from .serializers import PlantaSerializer
 #DRF
@@ -23,7 +24,7 @@ class PlantaViewSet(ModelViewSet):
         cidade = obj.local
 
         # chave da API do OpenWeather
-        API_KEY = "ebe9323dd4d66a4bb1b75ea1fc85302c"
+        API_KEY =  config("API_KEY")
         # requisção passando o nome da cidade e a chave da api
         link = f"https://api.openweathermap.org/data/2.5/weather?q={cidade}&appid={API_KEY}&lang=pt_br"
 
