@@ -36,7 +36,7 @@ $ python manage.py runserver
 
 ### 🔑 Autenticação
 ```
-# Para receber o token de acesso:
+* Para receber o token de acesso:
 curl \
   -X POST \
   -H "Content-Type: application/json" \
@@ -49,12 +49,12 @@ curl \
   "refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImNvbGRfc3R1ZmYiOiLimIMiLCJleHAiOjIzNDU2NywianRpIjoiZGUxMmY0ZTY3MDY4NDI3ODg5ZjE1YWMyNzcwZGEwNTEifQ.aEoAYkSJjoWH1boshQAaTkf8G3yn0kapko6HFRt7Rh4"
 }
 
-# Você deve usar o token de acesso retornado no Header da requisição para comprovar a autenticação:
+* Você deve usar o token de acesso retornado no Header da requisição para comprovar a autenticação:
 curl \
   -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiY29sZF9zdHVmZiI6IuKYgyIsImV4cCI6MTIzNDU2LCJqdGkiOiJmZDJmOWQ1ZTFhN2M0MmU4OTQ5MzVlMzYyYmNhOGJjYSJ9.NHlztMGER7UADHZJlxNG0WSi22a2KaYSfd1S-AuT7lU" \
   http://localhost:8000/api/some-protected-view/
 
-# Quando o token de acesso expirar, você deve realizar o refresh passando o antigo token para obter um novo token de acesso:
+* Quando o token de acesso expirar, você deve realizar o refresh passando o antigo token para obter um novo token de acesso:
 curl \
   -X POST \
   -H "Content-Type: application/json" \
