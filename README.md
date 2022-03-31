@@ -26,7 +26,7 @@ $ venv/Scripts/activate (windows)
 #  Instale as bibliotecas necessarias 
 $ pip install -r requirements.txt
 
-# Execute a aplicação em modo de desenvolvimento
+# Execute a aplicação no terminal
 $ python manage.py runserver
 
 # O servidor inciará na porta:8000 - acesse <http://localhost:8000/api/v1/>
