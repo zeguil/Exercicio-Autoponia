@@ -18,12 +18,12 @@ class UsuarioSerializer(serializers.ModelSerializer):
 
     is_staff = serializers.BooleanField(
         label="Membro da Equipe",
-        help_text="Indica que usuário consegue acessar o site de administração."
+        help_text="Indica que usuário consegue acessar a página de administração."
     )
 
     is_superuser = serializers.BooleanField(
         label="Super Usuário",
-        help_text="Indica que este usuário tem todas as permissões sem atribuí-las explicitamente."
+        help_text="Indica que este usuário tem todas as permissões do sistema"
     )
 
     class Meta:
